@@ -73,7 +73,7 @@ heartCount('btn-heart7')
 heartCount('btn-heart8')
 heartCount('btn-heart9')
 
-// Call Feature
+// Emergency Call Feature
 document.getElementById('btn-call-emergency').addEventListener('click',function(event){
     event.preventDefault();
     console.log('emergency call clicked')
@@ -97,7 +97,216 @@ document.getElementById('btn-call-emergency').addEventListener('click',function(
     }
     else{
         alert("You don't have enough coins. You need at least 20 coins to make a call.")
-    }
+    }  
+})
+// Police Call Feature
+document.getElementById('btn-call-Police').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Police call clicked')
 
-    
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Police Helpline 999');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Police Helpline Number',
+            number: 999,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-Police')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Fire Service Call Feature
+document.getElementById('btn-call-fire-service').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Fire Service clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Fire Service 999');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Fire Service Number',
+            number: 999,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-fire-service')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Ambulance Service Call Feature
+document.getElementById('btn-call-ambulance-service').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Ambulance Service clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Ambulance Service 1994-999999');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Ambulance Service Number',
+            number: '1994-999999',
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-ambulance-service')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Women & Child Call Feature
+document.getElementById('btn-call-women-child').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Women & Child clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Women & Child Helpline 109');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Women & Child Helpline',
+            number: 109,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-women-child')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Anti-Corruption Feature
+document.getElementById('btn-call-anti-corruption').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Anti-Corruption clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Anti-Corruption Helpline 106');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Anti-Corruption Helpline',
+            number: 106,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-anti-corruption')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Electricity Helpline Feature
+document.getElementById('btn-call-electricity').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Electricity Helpline clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Electricity Helpline 16216');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Electricity Helpline',
+            number: 16216,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-electricity')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Brac Helpline Feature
+document.getElementById('btn-call-brac').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Brac Helpline clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Brac Helpline 16445');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Brac Helpline',
+            number: 16445,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-brac')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+// Bangladesh Railway Helpline Feature
+document.getElementById('btn-call-bangladesh-railway').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('Bangladesh Railway Helpline clicked')
+
+    const currentCoin = getInnerText('coin-amount');
+    console.log('coin is: ',currentCoin);
+
+    if(currentCoin >=20 ){
+        alert('📞 Bangladesh Railway Helpline 163');
+        const newCoin = currentCoin - 20;
+        console.log(newCoin);
+        setInnerText('coin-amount',newCoin);
+        // taking call input and it's date
+        const data = {
+            name: 'Bangladesh Railway Helpline',
+            number: 163,
+            date: new Date().toLocaleTimeString()
+        }
+        callHistoryData.push(data);
+        countCallHistory('btn-call-bangladesh-railway')
+    }
+    else{
+        alert("You don't have enough coins. You need at least 20 coins to make a call.")
+    }
+})
+document.getElementById('btn-clear').addEventListener('click',function(){
+    document.getElementById('call-history-container').innerText = '';
 })
