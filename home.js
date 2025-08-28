@@ -1,5 +1,5 @@
 console.log('connected')
-const callHistoryData = [];
+let callHistoryData = [];
 
 // function to get Innertext
 function getInnerText(id){
@@ -308,5 +308,6 @@ document.getElementById('btn-call-bangladesh-railway').addEventListener('click',
     }
 })
 document.getElementById('btn-clear').addEventListener('click',function(){
-    document.getElementById('call-history-container').innerText = '';
+    document.getElementById('call-history-container').innerHTML = '';
+    callHistoryData = [];
 })
