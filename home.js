@@ -36,18 +36,6 @@ for(const data of callHistoryData){
 }
 // })
 
-// Heart Feature
-// document.getElementById('btn-heart').addEventListener('click',function(event){
-//     event.preventDefault();
-//     console.log('Heart clicked');
-
-//     const currentHeart = getInnerText('heart-amount');
-//     console.log(currentHeart);
-
-//     const newHeart = currentHeart + 1;
-//     console.log(newHeart);
-//     setInnerText(newHeart);
-// })
 
 // function to count heart
 function heartCount(id){
@@ -72,6 +60,17 @@ heartCount('btn-heart6')
 heartCount('btn-heart7')
 heartCount('btn-heart8')
 heartCount('btn-heart9')
+// function to count copy
+function copyCount(id){
+    console.log('Copy clicked');
+
+    const currentCopy = getInnerText('copy-amount');
+    console.log(currentCopy);
+
+    const newCopy = currentCopy + 1;
+    console.log(newCopy);
+    setInnerText('copy-amount',newCopy);
+}
 
 // Emergency Call Feature
 document.getElementById('btn-call-emergency').addEventListener('click',function(event){
@@ -307,7 +306,29 @@ document.getElementById('btn-call-bangladesh-railway').addEventListener('click',
         alert("You don't have enough coins. You need at least 20 coins to make a call.")
     }
 })
+
+// clear feature
 document.getElementById('btn-clear').addEventListener('click',function(){
     document.getElementById('call-history-container').innerHTML = '';
     callHistoryData = [];
 })
+
+// copy feature
+const copys = document.querySelectorAll('.btn-copy');
+for(const copy of copys){
+    copy.addEventListener('click',function(){
+        // find roots div of button and text
+        let root = this.closest(".card");
+        // get the copy text
+        let text = root.querySelector(".number").innerText;
+        // set to clipboard
+        navigator.clipboard.writeText(text)
+        .then(function(){
+            alert('✅ Number copied: '+ text);
+            copyCount('btn-copy-emergency');
+        })
+        .catch(function(er) {
+            console.error("Failed to copy: ", er);
+        });
+    })
+}
