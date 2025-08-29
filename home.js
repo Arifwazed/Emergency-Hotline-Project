@@ -36,7 +36,6 @@ for(const data of callHistoryData){
 }
 // })
 
-
 // function to count heart
 function heartCount(id){
 document.getElementById(id).addEventListener('click',function(event){
