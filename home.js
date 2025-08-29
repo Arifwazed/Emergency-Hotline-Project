@@ -14,7 +14,6 @@ function setInnerText(id,value){
 }
 
 // function to call history features
-// document.getElementById('btn-call-emergency').addEventListener('click',function(){
 function countCallHistory(id){
 const callHistoryContainer = document.getElementById('call-history-container');
 callHistoryContainer.innerText = '';
@@ -34,12 +33,10 @@ for(const data of callHistoryData){
     callHistoryContainer.appendChild(div)
 }
 }
-// })
 
 // function to count heart
-function heartCount(id){
-document.getElementById(id).addEventListener('click',function(event){
-    event.preventDefault();
+function heartCount(){
+    // event.preventDefault();
     console.log('Heart clicked');
 
     const currentHeart = getInnerText('heart-amount');
@@ -48,17 +45,8 @@ document.getElementById(id).addEventListener('click',function(event){
     const newHeart = currentHeart + 1;
     console.log(newHeart);
     setInnerText('heart-amount',newHeart);
-})
 }
-heartCount('btn-heart')
-heartCount('btn-heart2')
-heartCount('btn-heart3')
-heartCount('btn-heart4')
-heartCount('btn-heart5')
-heartCount('btn-heart6')
-heartCount('btn-heart7')
-heartCount('btn-heart8')
-heartCount('btn-heart9')
+
 // function to count copy
 function copyCount(id){
     console.log('Copy clicked');
@@ -329,5 +317,13 @@ for(const copy of copys){
         .catch(function(er) {
             console.error("Failed to copy: ", er);
         });
+    })
+}
+
+// heart feature
+const hearts = document.querySelectorAll('.heart');
+for(const heart of hearts){
+    heart.addEventListener('click',function(){
+        heartCount();
     })
 }
